@@ -1,0 +1,7 @@
+version: '2'
+services:
+ web:
+  image: cybershelby/victorauth:48631
+  command: /bin/bash -c "service apache2 start; service mysql start; tail -f /dev/null"
+  ports:
+   - "8088:80"
